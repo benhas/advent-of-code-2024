@@ -1,3 +1,4 @@
+const { readFileAndPopulateLists } = require('./utils.js');
 function sumSortedLists(list1, list2) {
   // Sort both lists
   list1.sort((a, b) => a - b);
@@ -17,6 +18,6 @@ function sumSortedLists(list1, list2) {
 
 module.exports = { sumSortedLists };
 
-const list1 = [3, 4, 2, 1, 3, 3];
-const list2 = [4, 3, 5, 3, 9, 3];
+const list1 = readFileAndPopulateLists('./files/day-1-lists.txt').firstList;
+const list2 = readFileAndPopulateLists('./files/day-1-lists.txt').secondList;
 console.log(sumSortedLists(list1,list2));
